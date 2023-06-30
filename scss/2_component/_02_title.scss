@@ -1,0 +1,54 @@
+/*------------------------------------------------------------
+	Title
+------------------------------------------------------------*/
+
+.title01 {
+	font-family: "Playball", cursive;
+	font-size: 32px;
+	color: $color3;
+	letter-spacing: 1px;
+	position: relative;
+	span {
+		position: relative;
+		padding-bottom: 5px;
+		&:before {
+			content: "";
+			width: 50%;
+			height: 2px;
+			background-color: $color2;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
+	}
+}
+.title02 {
+	font-weight: 500;
+	font-size: 20px;
+	color: $color3;
+	position: relative;
+	@include max(1440px) {
+		font-size: 16px;
+	}
+	span {
+		position: relative;
+		padding-bottom: 10px;
+		&:before {
+			content: "";
+			width: 50px;
+			height: 2px;
+			background-color: $color2;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
+	}
+}
+.title03 {
+	color: $color3;
+	font-family: "Playball", cursive;
+	font-size: 32px;
+	font-weight: normal;
+	letter-spacing: 1px;
+	position: relative;
+}

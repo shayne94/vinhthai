@@ -1,0 +1,19 @@
+/*------------------------------------------------------------
+	Footer
+------------------------------------------------------------*/
+.c-footer {
+	padding: 50px 0;
+	@media (max-width: 480px) {
+		padding: 25px 0;
+	}
+	p {
+        font-family: "Playball", cursive;
+        font-size: 32px;
+        letter-spacing: 1px;
+		text-align: center;
+		@media (max-width: 480px) {
+            font-size: 28px;
+			line-height: 1.2;
+        }
+	}
+}

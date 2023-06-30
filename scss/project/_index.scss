@@ -1,0 +1,527 @@
+.about {
+    background: url(../../assets/images/index/bg04.png) repeat;
+    padding: 100px 0 90px;
+    @media (max-width: 768px) {
+        padding: 70px 0 60px;
+    }
+    @media (max-width: 480px) {
+        padding: 50px 0 40px; 
+    }
+    &__title {
+        font-size: 48px;
+        font-weight: 500;
+        margin-bottom: 100px;
+        text-align: center;
+        text-transform: uppercase;
+        @media (max-width: 768px) {
+            margin-bottom: 70px;
+        }
+        @media (max-width: 480px) {
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+    }
+    &__txt {
+        text-align: justify;
+        text-align-last: left;
+        padding: 0 100px;
+        @media (max-width: 1200px) {
+            padding: 0 50px;
+        }
+        @media (max-width: 768px) {
+            padding: 0 25px;
+        }
+        @media (max-width: 480px) {
+            padding: 0 10px;   
+        }
+    }
+}
+.portfolio {
+    padding-top: 100px;
+    @media (max-width: 1200px) {
+        padding: 100px 50px 90px;
+    }
+    @media (max-width: 768px) {
+        padding: 70px 25px 60px;
+    }
+    @media (max-width: 480px) {
+        padding: 50px 10px 40px;
+    }
+    &__title {
+        font-size: 48px;
+        font-weight: 500;
+        text-align: center;
+        text-transform: uppercase;
+        @media (max-width: 480px) {
+            font-size: 36px;
+        }
+    }
+    &__cont {
+        margin-top: 100px;
+        @media (max-width: 768px) {
+            margin-top: 70px;
+        }
+        @media (max-width: 480px) {
+            margin-top: 50px;
+        }
+    }
+    &__subtitle {
+        display: inline-block;
+        font-size: 24px;
+        margin-bottom: 50px;
+        padding: 25px;
+        position: relative;
+        &::before {
+            background-image: url(../../assets/images/index/decor01.png);
+            background-repeat: no-repeat;
+            content: "";
+            height: 54px;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 54px;
+            @media (max-width: 480px) {
+                background-size: 80%;
+            }
+        }
+        &::after {
+            background-image: url(../../assets/images/index/decor02.png);
+            background-repeat: no-repeat;
+            bottom: 0;
+            content: "";
+            height: 54px;
+            position: absolute;
+            right: 0;
+            width: 54px;
+            @media (max-width: 480px) {
+                background-size: 80%;
+                background-position: 100% 100%;
+            }
+        }
+        span {
+            color: $color3;
+            font-family: "Playball", cursive;
+            font-size: 32px;
+            letter-spacing: 1px;
+            @media (max-width: 480px) {
+                font-size: 28px;
+            }
+        }
+        @media (max-width: 768px) {
+            margin-bottom: 25px;
+        }
+        @media (max-width: 480px) {
+            font-size: 20px;
+            margin-bottom: 0;
+            padding: 15px;
+        }
+    }
+    &__box {
+        @include flex-jbetween;
+        @media (max-width: 768px) {
+            flex-wrap: wrap;
+        }
+    }
+    &__inner {
+        @include flex-center;
+        background-image: linear-gradient(135deg, $color3, $color2);
+        border-radius: 20px;
+        cursor: pointer;
+        overflow: hidden;
+        position: relative;
+        width: calc(100% / 4 - 150px / 4);
+        @media (max-width: 768px) {
+            margin-top: 25px;
+            width: calc(100% / 2 - 25px / 2);
+        }
+        a {
+            padding: 4px;
+            position: relative;
+            height: calc(100% - 8px);
+            img {
+                border-radius: 20px;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: relative;
+            }
+            &::before {
+                background-color: black;
+                border-radius: 20px;
+                content: "";
+                height: calc(100% - 8px);
+                opacity: 0;
+                position: absolute;
+                transition: all 0.3s ease;
+                width: calc(100% - 8px);
+                z-index: 1;
+            }
+        }
+        p {
+            color: $color2;
+            font-size: 20px;
+            opacity: 0;
+            padding: 10px;
+            position: absolute;
+            pointer-events: none;
+            text-align: center;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+        &:hover {
+            a {
+                &::before {
+                    opacity: 0.75;
+                }
+            }
+            p {
+                opacity: 1;
+            }
+        }
+    }
+}
+.resume {
+    padding: 100px 0 90px;
+    @media (max-width: 768px) {
+        padding: 70px 25px 60px;
+    }
+    @media (max-width: 480px) {
+        padding: 50px 10px 40px;
+    }
+    &__title {
+        font-size: 48px;
+        font-weight: 500;
+        text-align: center;
+        text-transform: uppercase;
+        @media (max-width: 480px) {
+            font-size: 36px;
+        }
+    }
+    &__cont {
+        @include flex-jbetween;
+        margin-top: 100px;
+        @media (max-width: 768px) {
+            flex-direction: column;
+            margin-top: 70px;
+        }
+        @media (max-width: 480px) {
+            margin-top: 50px;
+        }
+    }
+    &__edu {
+        @include flex-jstart;
+        flex-direction: column;
+        align-items: flex-end;
+        border-right: 4px solid $color3;
+        margin-right: 25px;
+        padding-bottom: 40px;
+        padding-right: 90px;
+        position: relative;
+        width: 100%;
+        @media (max-width: 768px) {
+            align-items: flex-start;
+            border: 0;
+        }
+        @media (max-width: 480px) {
+            padding-right: 0;
+        }
+        &::before {
+            background-image: url(../../assets/images/index/decor03.png);
+            content: "";
+            height: 101px;
+            right: 0;
+            position: absolute;
+            top: 0;
+            width: 105px;
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+        &::after {
+            background-image: url(../../assets/images/index/decor06.png);
+            bottom: -6px;
+            content: "";
+            height: 15px;
+            right: 0;
+            position: absolute;
+            width: 101px;
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+    }
+    &__exp {
+        @include flex-jstart;
+        flex-direction: column;
+        align-items: flex-start;
+        border-left: 4px solid $color3;
+        margin-left: 25px;
+        padding-bottom: 40px;
+        padding-left: 90px;
+        position: relative;
+        width: 100%;
+        @media (max-width: 768px) {
+            align-items: flex-start;
+            border: 0;
+            margin-left: 0;
+            padding: 0;
+        }
+        &::before {
+            background-image: url(../../assets/images/index/decor04.png);
+            content: "";
+            height: 101px;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 105px;
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+        &::after {
+            background-image: url(../../assets/images/index/decor07.png);
+            bottom: -6px;
+            content: "";
+            height: 15px;
+            left: 0;
+            position: absolute;
+            width: 101px;
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+    }
+    &__subtitle {
+        color: $color3;
+        display: inline-block;
+        font-family: "Playball", cursive;
+        font-size: 32px;
+        letter-spacing: 1px;
+        padding: 36px 50px;
+        position: relative;
+        &::before {
+            background-image: url(../../assets/images/index/decor01.png);
+            background-repeat: no-repeat;
+            content: "";
+            display: none;
+            height: 54px;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 54px;
+            @media (max-width: 768px) {
+                display: inline;
+            }
+            @media (max-width: 480px) {
+                background-size: 80%;
+            }
+        }
+        &::after {
+            background-image: url(../../assets/images/index/decor02.png);
+            background-repeat: no-repeat;
+            bottom: 0;
+            content: "";
+            display: none;
+            height: 54px;
+            position: absolute;
+            right: 0;
+            width: 54px;
+            @media (max-width: 768px) {
+                display: inline;
+            }
+            @media (max-width: 480px) {
+                background-size: 80%;
+                background-position: 100% 100%;
+            }
+        }
+        span {
+            color: $color3;
+            @media (max-width: 768px) {
+                color: $color2;
+            }
+        }
+        @media (max-width: 768px) {
+            padding: 25px;
+        }
+        @media (max-width: 480px) {
+            font-size: 28px;
+            padding: 15px;
+        }
+    }
+    &__box {
+        @include flex-jend;
+        flex-direction: column;
+        margin-top: 50px;
+        @media (max-width: 768px) {
+            flex-direction: row;
+        }
+        @media (max-width: 480px) {
+            flex-direction: column;
+            margin-top: 25px;
+        }
+        &--01 {
+            align-items: flex-end;
+            text-align: right;
+            @media (max-width: 768px) {
+                align-items: flex-start;
+                text-align: left;
+            }
+        }
+        &--02 {
+            align-items: flex-start;
+        }
+    }
+    &__time {
+        @include flex-center;
+        background: url(../../assets/images/index/bg04.png) repeat;
+        border-radius: 30px;
+        height: 42px;
+        margin: 0;
+        width: 180px;
+    }
+    &__txt {
+        margin-top: 17px;
+        @media (max-width: 768px) {
+            margin-left: 25px;
+            margin-top: 0;
+        }
+        @media (max-width: 480px) {
+            margin-left: 0;
+            margin-top: 10px;
+        }
+        &--01 {
+            font-size: 20px;
+            text-transform: uppercase;
+            @media (max-width: 480px) {
+                font-size: 16px;
+            }
+        }
+        &--02 {
+            color: $color3;
+            font-size: 20px;
+            margin-top: 5px;
+            @media (max-width: 480px) {
+                font-size: 16px;
+                margin-top: 0;
+            }
+        }
+        &--03 {
+            margin-top: 7px;
+            span {
+                font-weight: 500;
+            }
+            @media (max-width: 480px) {
+                margin-top: 0;
+            }
+        }
+        &--04 {
+            margin-top: 7px;
+            padding-left: 25px;
+            position: relative;
+            @media (max-width: 480px) {
+                margin-top: 0;
+            }
+            &::before {
+                background-image: url(../../assets/images/index/decor05.png);
+                content: "";
+                height: 2px;
+                left: 0;
+                position: absolute;
+                top: 50%;
+                width: 10px;
+            }
+        }
+    }
+}
+.contact {
+    background: url(../../assets/images/index/bg04.png) repeat;
+    border-bottom: 2px solid $color2;
+    padding: 100px 0 90px;
+    @media (max-width: 768px) {
+        padding: 70px 0 60px;
+    }
+    @media (max-width: 480px) {
+        padding: 50px 0;
+    }
+    &__title {
+        font-size: 48px;
+        font-weight: 500;
+        margin-bottom: 100px;
+        text-align: center;
+        text-transform: uppercase;
+        @media (max-width: 768px) {
+            margin-bottom: 70px;
+        }
+        @media (max-width: 480px) {
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+    }
+    &__cont {
+        @include flex-jbetween;
+        padding: 0 100px;
+        @media (max-width: 1200px) {
+            padding: 0 50px;
+        }
+        @media (max-width: 768px) {
+            padding: 0 25px;
+        }
+        @media (max-width: 480px) {
+            flex-direction: column;
+            padding: 0 10px;
+        }
+    }
+    &__box {
+        @include flex-jbetween;
+        flex-direction: column;
+    }
+    &__inner {
+        @include flex-jstart;
+        @media (max-width: 480px) {
+            margin-bottom: 20px;
+        }
+    }
+    &__icon {
+        @media (max-width: 480px) {
+            transform: scale(0.8);
+            transform-origin: left;
+        }
+    }
+    &__txt {
+        @include flex-jcenter;
+        flex-direction: column;
+        margin-left: 50px;
+        @media (max-width: 768px) {
+            margin-left: 15px;
+        }
+        @media (max-width: 480px) {
+            margin-left: 5px;
+        }
+        p {
+            font-family: "Playball", cursive;
+            font-size: 32px;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            @media (max-width: 480px) {
+                font-size: 28px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+    &__img {
+        border: 2px solid $color2;
+        border-radius: 20px;
+        box-shadow: 7px 7px 7px rgba($color: $color1, $alpha: 0.25);
+        @media (max-width: 768px) {
+            width: 45%;
+        }
+        @media (max-width: 480px) {
+            width: 100%;
+        }
+        img {
+            border-radius: 20px;
+            width: 100%;
+        }
+    }
+}

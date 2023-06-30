@@ -1,0 +1,50 @@
+.uiux {
+    padding: 100px 0;
+    &__title {
+        text-shadow: 0 0 5px $color3, 0 0 10px $color3, 0 0 15px $color3, 0 0 20px $color3;
+        font-size: 48px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        text-align: center;
+        text-transform: uppercase;
+        span {
+            font-family: "Playball", cursive;
+            letter-spacing: 1px;
+            text-transform: none;
+        }
+    }
+    &__box {
+        margin-top: 100px;
+    }
+    &__subtitle {
+        display: inline-block;
+        font-size: 24px;
+        margin-bottom: 50px;
+        padding: 25px;
+        position: relative;
+        &::before {
+            background-image: url(../../assets/images/index/decor01.png);
+            content: "";
+            height: 54px;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 54px;
+        }
+        &::after {
+            background-image: url(../../assets/images/index/decor02.png);
+            bottom: 0;
+            content: "";
+            height: 54px;
+            position: absolute;
+            right: 0;
+            width: 54px;
+        }
+        span {
+            color: $color3;
+            font-family: "Playball", cursive;
+            font-size: 32px;
+            letter-spacing: 1px;
+        }
+    }
+}

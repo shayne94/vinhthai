@@ -266,6 +266,7 @@ header {
 .c-menu {
   display: flex;
   justify-content: flex-start;
+  display: none;
   position: absolute;
   right: 7.8125%;
   top: 50px;

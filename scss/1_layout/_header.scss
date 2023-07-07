@@ -9,6 +9,7 @@ header {
 }
 .c-menu {
 	@include flex-jstart;
+	display: none;
 	position: absolute;
 	right: 7.8125%;
 	top: 50px;

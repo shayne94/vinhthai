@@ -231,8 +231,8 @@ h1 img {
     display: none;
   }
 }
-@media (max-width: 640px) {
-  .max-640 {
+@media (max-width: 480px) {
+  .max-480 {
     display: none;
   }
 }
@@ -246,8 +246,8 @@ h1 img {
     display: none;
   }
 }
-@media (min-width: 641px) {
-  .min-641 {
+@media (min-width: 481px) {
+  .min-481 {
     display: none;
   }
 }
@@ -260,6 +260,16 @@ header {
 @media (max-width: 1200px) {
   header {
     padding: 50px 0;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    padding: 35px 0;
+  }
+}
+@media (max-width: 480px) {
+  header {
+    padding: 25px 0;
   }
 }
 
@@ -522,19 +532,14 @@ header {
 .about__title {
   font-size: 48px;
   font-weight: 500;
-  margin-bottom: 100px;
+  margin-bottom: 70px;
   text-align: center;
   text-transform: uppercase;
-}
-@media (max-width: 768px) {
-  .about__title {
-    margin-bottom: 70px;
-  }
 }
 @media (max-width: 480px) {
   .about__title {
     font-size: 36px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 }
 .about__txt {
@@ -563,41 +568,43 @@ header {
 }
 @media (max-width: 1200px) {
   .portfolio {
-    padding: 100px 50px 90px;
+    padding: 100px 50px 25px;
   }
 }
 @media (max-width: 768px) {
   .portfolio {
-    padding: 70px 25px 60px;
+    padding: 70px 25px 57.5px;
   }
 }
 @media (max-width: 480px) {
   .portfolio {
-    padding: 50px 10px 40px;
+    padding: 50px 10px 30px;
   }
 }
 .portfolio__title {
   font-size: 48px;
   font-weight: 500;
+  margin-bottom: 70px;
   text-align: center;
   text-transform: uppercase;
 }
+@media (max-width: 1200px) {
+  .portfolio__title {
+    margin-bottom: 50px;
+  }
+}
 @media (max-width: 480px) {
   .portfolio__title {
+    margin-bottom: 30px;
     font-size: 36px;
   }
 }
 .portfolio__cont {
-  margin-top: 100px;
-}
-@media (max-width: 768px) {
-  .portfolio__cont {
-    margin-top: 70px;
-  }
+  margin-top: 20px;
 }
 @media (max-width: 480px) {
   .portfolio__cont {
-    margin-top: 50px;
+    margin-top: 30px;
   }
 }
 .portfolio__subtitle {
@@ -663,11 +670,20 @@ header {
 }
 .portfolio__box {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 -25px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .portfolio__box {
-    flex-wrap: wrap;
+    margin: 0 -12.5px;
+    width: calc(100% + 25px);
+  }
+}
+@media (max-width: 480px) {
+  .portfolio__box {
+    margin: 30px -10px 0;
+    width: calc(100% + 20px);
   }
 }
 .portfolio__inner {
@@ -678,14 +694,27 @@ header {
   background-image: linear-gradient(135deg, #0072ff, #fff);
   border-radius: 20px;
   cursor: pointer;
+  margin: 0 25px 50px;
   overflow: hidden;
   position: relative;
-  width: calc(25% - 37.5px);
+  width: calc(25% - 50px);
+}
+@media (max-width: 1200px) {
+  .portfolio__inner {
+    margin: 0 12.5px 25px;
+    width: calc(25% - 25px);
+  }
 }
 @media (max-width: 768px) {
   .portfolio__inner {
-    margin-top: 25px;
-    width: calc(50% - 12.5px);
+    margin: 0 12.5px 25px;
+    width: calc(50% - 25px);
+  }
+}
+@media (max-width: 480px) {
+  .portfolio__inner {
+    margin: 0 10px 20px;
+    width: calc(50% - 20px);
   }
 }
 .portfolio__inner a {
@@ -731,16 +760,21 @@ header {
 }
 
 .resume {
-  padding: 100px 0 90px;
+  padding: 50px 0 90px;
+}
+@media (max-width: 1200px) {
+  .resume {
+    padding: 50px 50px 90px;
+  }
 }
 @media (max-width: 768px) {
   .resume {
-    padding: 70px 25px 60px;
+    padding: 0 25px 60px;
   }
 }
 @media (max-width: 480px) {
   .resume {
-    padding: 50px 10px 40px;
+    padding: 0 10px 40px;
   }
 }
 .resume__title {
@@ -757,7 +791,12 @@ header {
 .resume__cont {
   display: flex;
   justify-content: space-between;
-  margin-top: 100px;
+  margin-top: 70px;
+}
+@media (max-width: 1200px) {
+  .resume__cont {
+    margin-top: 50px;
+  }
 }
 @media (max-width: 768px) {
   .resume__cont {
@@ -767,7 +806,7 @@ header {
 }
 @media (max-width: 480px) {
   .resume__cont {
-    margin-top: 50px;
+    margin-top: 30px;
   }
 }
 .resume__edu {
@@ -781,6 +820,11 @@ header {
   padding-right: 90px;
   position: relative;
   width: 100%;
+}
+@media (max-width: 1200px) {
+  .resume__edu {
+    padding-right: 40px;
+  }
 }
 @media (max-width: 768px) {
   .resume__edu {
@@ -801,6 +845,13 @@ header {
   position: absolute;
   top: 0;
   width: 105px;
+}
+@media (max-width: 1200px) {
+  .resume__edu::before {
+    background-image: url(../../assets/images/index/decor14.png);
+    height: 55px;
+    width: 55px;
+  }
 }
 @media (max-width: 768px) {
   .resume__edu::before {
@@ -833,6 +884,11 @@ header {
   position: relative;
   width: 100%;
 }
+@media (max-width: 1200px) {
+  .resume__exp {
+    padding-left: 40px;
+  }
+}
 @media (max-width: 768px) {
   .resume__exp {
     align-items: flex-start;
@@ -849,6 +905,13 @@ header {
   position: absolute;
   top: 0;
   width: 105px;
+}
+@media (max-width: 1200px) {
+  .resume__exp::before {
+    background-image: url(../../assets/images/index/decor15.png);
+    height: 55px;
+    width: 55px;
+  }
 }
 @media (max-width: 768px) {
   .resume__exp::before {
@@ -927,6 +990,11 @@ header {
 @media (max-width: 768px) {
   .resume__subtitle span {
     color: #fff;
+  }
+}
+@media (max-width: 1200px) {
+  .resume__subtitle {
+    padding: 10px 25px;
   }
 }
 @media (max-width: 768px) {
@@ -1077,7 +1145,7 @@ header {
 @media (max-width: 480px) {
   .contact__title {
     font-size: 36px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 }
 .contact__cont {
@@ -1170,7 +1238,22 @@ header {
 }
 
 .uiux {
-  padding: 100px 0;
+  padding: 0 0 100px;
+}
+@media (max-width: 1200px) {
+  .uiux {
+    padding: 0 50px 100px;
+  }
+}
+@media (max-width: 768px) {
+  .uiux {
+    padding: 0 25px 70px;
+  }
+}
+@media (max-width: 480px) {
+  .uiux {
+    padding: 0 10px 50px;
+  }
 }
 .uiux__title {
   text-shadow: 0 0 5px #0072ff, 0 0 10px #0072ff, 0 0 15px #0072ff, 0 0 20px #0072ff;
@@ -1185,8 +1268,16 @@ header {
   letter-spacing: 1px;
   text-transform: none;
 }
+@media (max-width: 480px) {
+  .uiux__title {
+    font-size: 36px;
+  }
+}
 .uiux__box {
   margin-top: 100px;
+}
+.uiux__box img {
+  width: 100%;
 }
 .uiux__subtitle {
   display: inline-block;

@@ -10,15 +10,12 @@
     &__title {
         font-size: 48px;
         font-weight: 500;
-        margin-bottom: 100px;
+        margin-bottom: 70px;
         text-align: center;
         text-transform: uppercase;
-        @media (max-width: 768px) {
-            margin-bottom: 70px;
-        }
         @media (max-width: 480px) {
             font-size: 36px;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
         }
     }
     &__txt {
@@ -39,30 +36,32 @@
 .portfolio {
     padding-top: 100px;
     @media (max-width: 1200px) {
-        padding: 100px 50px 90px;
+        padding: 100px 50px 25px;
     }
     @media (max-width: 768px) {
-        padding: 70px 25px 60px;
+        padding: 70px 25px 57.5px;
     }
     @media (max-width: 480px) {
-        padding: 50px 10px 40px;
+        padding: 50px 10px 30px;
     }
     &__title {
         font-size: 48px;
         font-weight: 500;
+        margin-bottom: 70px;
         text-align: center;
         text-transform: uppercase;
+        @media (max-width: 1200px) {
+            margin-bottom: 50px;
+        }
         @media (max-width: 480px) {
+            margin-bottom: 30px;
             font-size: 36px;
         }
     }
     &__cont {
-        margin-top: 100px;
-        @media (max-width: 768px) {
-            margin-top: 70px;
-        }
+        margin-top: 20px;
         @media (max-width: 480px) {
-            margin-top: 50px;
+            margin-top: 30px;
         }
     }
     &__subtitle {
@@ -117,9 +116,16 @@
         }
     }
     &__box {
-        @include flex-jbetween;
-        @media (max-width: 768px) {
-            flex-wrap: wrap;
+        @include flex-jcenter;
+        flex-wrap: wrap;
+        margin: 0 -25px;
+        @media (max-width: 1200px) {
+            margin: 0 -12.5px;
+            width: calc(100% + 25px);
+        }
+        @media (max-width: 480px) {
+            margin: 30px -10px 0;
+            width: calc(100% + 20px);
         }
     }
     &__inner {
@@ -127,12 +133,21 @@
         background-image: linear-gradient(135deg, $color3, $color2);
         border-radius: 20px;
         cursor: pointer;
+        margin: 0 25px 50px;
         overflow: hidden;
         position: relative;
-        width: calc(100% / 4 - 150px / 4);
+        width: calc(100% / 4 - 50px);
+        @media (max-width: 1200px) {
+            margin: 0 12.5px 25px;
+            width: calc(100% / 4 - 25px);
+        }
         @media (max-width: 768px) {
-            margin-top: 25px;
-            width: calc(100% / 2 - 25px / 2);
+            margin: 0 12.5px 25px;
+            width: calc(100% / 2 - 25px);
+        }
+        @media (max-width: 480px) {
+            margin: 0 10px 20px;
+            width: calc(100% / 2 - 20px);
         }
         a {
             padding: 4px;
@@ -182,12 +197,15 @@
     }
 }
 .resume {
-    padding: 100px 0 90px;
+    padding: 50px 0 90px;
+    @media (max-width: 1200px) {
+        padding: 50px 50px 90px;
+    }
     @media (max-width: 768px) {
-        padding: 70px 25px 60px;
+        padding: 0 25px 60px;
     }
     @media (max-width: 480px) {
-        padding: 50px 10px 40px;
+        padding: 0 10px 40px;
     }
     &__title {
         font-size: 48px;
@@ -200,13 +218,16 @@
     }
     &__cont {
         @include flex-jbetween;
-        margin-top: 100px;
+        margin-top: 70px;
+        @media (max-width: 1200px) {
+            margin-top: 50px;
+        }
         @media (max-width: 768px) {
             flex-direction: column;
             margin-top: 70px;
         }
         @media (max-width: 480px) {
-            margin-top: 50px;
+            margin-top: 30px;
         }
     }
     &__edu {
@@ -219,6 +240,9 @@
         padding-right: 90px;
         position: relative;
         width: 100%;
+        @media (max-width: 1200px) {
+            padding-right: 40px;
+        }
         @media (max-width: 768px) {
             align-items: flex-start;
             border: 0;
@@ -234,6 +258,11 @@
             position: absolute;
             top: 0;
             width: 105px;
+            @media (max-width: 1200px) {
+                background-image: url(../../assets/images/index/decor14.png);
+                height: 55px;
+                width: 55px;
+            }
             @media (max-width: 768px) {
                 display: none;
             }
@@ -261,6 +290,9 @@
         padding-left: 90px;
         position: relative;
         width: 100%;
+        @media (max-width: 1200px) {
+            padding-left: 40px;
+        }
         @media (max-width: 768px) {
             align-items: flex-start;
             border: 0;
@@ -275,6 +307,11 @@
             position: absolute;
             top: 0;
             width: 105px;
+            @media (max-width: 1200px) {
+                background-image: url(../../assets/images/index/decor15.png);
+                height: 55px;
+                width: 55px;
+            }
             @media (max-width: 768px) {
                 display: none;
             }
@@ -340,6 +377,9 @@
             @media (max-width: 768px) {
                 color: $color2;
             }
+        }
+        @media (max-width: 1200px) {
+            padding: 10px 25px;
         }
         @media (max-width: 768px) {
             padding: 25px;
@@ -455,7 +495,7 @@
         }
         @media (max-width: 480px) {
             font-size: 36px;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
         }
     }
     &__cont {
